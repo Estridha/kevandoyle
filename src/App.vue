@@ -1,15 +1,25 @@
 <script>
+import BaseFooter from "@/components/BaseFooter.vue";
+import SideBar from "@/components/sidebar/SideBar.vue"
+import { sidebarWidth } from "./components/sidebar/state";
 export default {
   data() {
     return {
       menuIsOpen: false,
     };
   },
+  components: {
+    BaseFooter,
+    SideBar,
+  },
   methods: {
     toggleMenu: function (event) {
       this.menuIsOpen = !this.menuIsOpen;
     },
   },
+  setup() {
+    return { sidebarWidth }
+  }
 };
 </script>
 
@@ -17,25 +27,20 @@ export default {
   <nav>
     <p>Kevan Doyle</p>
     <div class="navigation-menu">
-      <router-link to="/">Home</router-link>
+      <router-link to="/work">Work</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
     </div>
-    <button class="mobile-menu" v-on:click="toggleMenu">
-      <img v-if="!menuIsOpen" src="@/assets/images/menu-collapsed.png" alt="menu-icon" />
-      <img v-else src="@/assets/images/close.png"/>
-    </button>
   </nav>
-  <div v-if="menuIsOpen" class="mobile-menu-open">
-    <ul>
-      <li><router-link to="/" @click="toggleMenu">Home</router-link></li>
-      <li><router-link to="/about" @click="toggleMenu">About</router-link></li>
-      <li>
-        <router-link to="/contact" @click="toggleMenu">Contact</router-link>
-      </li>
-    </ul>
-  </div>
-  <router-view />
+<div class="mobile-sidebar">
+  <SideBar/>
+</div>
+  <content :style="{'margin-left': sidebarWidth}">
+    <router-view class="content" />
+  </content>
+  <footer>
+    <BaseFooter />
+  </footer>
 </template>
 
 <style lang="scss">
@@ -43,6 +48,7 @@ export default {
 #app {
   /*  background-image: url(@/assets/images/background.jpg);
   background-size: cover; */
+  position: relative;
   min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -51,43 +57,63 @@ export default {
   color: #2c3e50;
 }
 
-body {
-  margin: 0;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  padding: 30px;
-}
-
-nav a,
-li a {
+*, body {
   color: black;
-  margin: 0 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-ul {
   margin: 0;
   padding: 0;
 }
 
-li {
-  list-style-type: none;
-  padding-top: 2rem;
+nav {
+  color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 2.5rem;
+  background-color: rgba(0, 0, 0, 0.173);
+
+  a,
+  li {
+    color: black;
+    margin: 0 1rem;
+    text-decoration: none;
+  }
+
+  a.router-link-exact-active {
+    font-weight: bold;
+  }
+
+  button {
+    background: transparent;
+    border: none !important;
+    font-size: 0;
+    height: min-content;
+  }
 }
 
-nav a.router-link-exact-active {
-  font-weight: bold;
+aside {
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    padding-top: 2rem;
+    a {
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
 }
 
-button {
-  background: transparent;
-  border: none !important;
-  font-size: 0;
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .navigation-menu {
@@ -98,19 +124,17 @@ button {
   }
 }
 
-.mobile-menu,
-.mobile-menu-open {
+.mobile-sidebar {
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 
-.mobile-menu-open {
-  background: white;
-  width: 100vw;
-  height: auto;
-  position: absolute;
-  top: 6rem;
-  bottom: 0;
+content {
+  padding-bottom: 3rem;
+  max-width: 100vw;
+  overflow: none;
 }
+
+
 </style>
