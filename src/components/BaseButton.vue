@@ -37,6 +37,7 @@ button {
   display: inline-block;
   cursor: pointer;
   text-transform: uppercase;
+  margin: 1rem;
 
   &.primary {
     color: white;

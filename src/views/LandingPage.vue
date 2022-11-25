@@ -24,7 +24,7 @@ export default {
 <style lang="scss" scoped>
 
 .landing-page-desc {
-  margin-top: 40%;
+  margin-top: 8rem;
   margin-bottom: 6rem;
   color: white;
 }
