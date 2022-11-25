@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <h1 class="landing-page-desc">Ready to make your business look like it deserves</h1>
-	<router-link to="/about" @click="toggleMenu"><BaseButton text="See my work"/></router-link>
+    <h1 class="landing-page-desc">Ready to make your business <br/> look like it deserves</h1>
+	<router-link to="/about" @click="toggleMenu"><BaseButton class="secondary" text="About the photographer"/></router-link>
     <div class="video-container">
 			<video src="https://traversymedia.com/downloads/video.mov" autoplay muted loop></video>
 		</div>
@@ -22,12 +22,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home {
-  z-index: 2;
-}
 
 .landing-page-desc {
-  margin-top: 8rem;
+  margin-top: 40%;
   margin-bottom: 6rem;
   color: white;
 }
@@ -38,7 +35,7 @@ export default {
 	left: 0;
 	width: 100%;
 	height: 100%;
-  z-index: -1;
+    z-index: -1;
 	overflow: hidden;
 	background: var(--primary-color) url('https://traversymedia.com/downloads/cover.jpg') no-repeat center
 		center;

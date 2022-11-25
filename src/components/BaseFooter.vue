@@ -21,10 +21,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .footer-container {
-    background-color: rgba(0, 0, 0, 0.119);
+  background-color: rgba(0, 0, 0, 0.119);
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
   .footer-element {
     margin: 0 1rem;
 

@@ -28,7 +28,7 @@ export default {
   --sidebar-item-active: #0000003b;
 }
 </style>
-<style scoped>
+<style lang="scss" scoped>
 .sidebar {
   position: fixed;
   /* remove z-index to display social icons in sidebar */
@@ -37,6 +37,10 @@ export default {
   bottom: 0;
   right: 0;
   transition: 1s ease;
+  
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .menu-icon {
   position: absolute;
