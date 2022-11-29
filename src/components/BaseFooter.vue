@@ -1,17 +1,21 @@
 <template>
   <div class="footer-container">
     <div class="footer-element social-icons">
-      <a href="#"><img src="@/assets/images/youtube.png" alt="youtube-icon" /></a>
-      <a href="#"><img src="@/assets/images/linkedin.png" alt="linkedin-icon" /></a>
-      <a href="#"><img src="@/assets/images/instagram.png" alt="instagram-icon" /></a>
+      <a href="#"><Icon name="youtube"/></a>
+      <a href="#"><Icon name="linkedin"/></a>
+      <a href="#"><Icon name="instagram"/></a>
     </div>
     <div class="footer-element copyright"><p>Design by EsDesigns</p></div>
   </div>
 </template>
 
 <script>
+import Icon from './Icon.vue';
 export default {
   name: "BaseFooter",
+  components: {
+    Icon,
+  },
   /*     props: {
       msg: String
     } */
@@ -41,6 +45,7 @@ export default {
   .social-icons {
     a {
         display: flex;
+        margin: 0.3rem;
     }
     display: flex;
     align-items: center;

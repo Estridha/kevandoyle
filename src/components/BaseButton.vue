@@ -38,6 +38,7 @@ button {
   cursor: pointer;
   text-transform: uppercase;
   margin: 1rem;
+  font-size: 1.1rem;
 
   &.primary {
     color: white;

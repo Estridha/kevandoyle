@@ -11,10 +11,10 @@ export default {
     BaseHeader,
     SideBar,
   },
-  methods: {
-    /*     isOnLangingPage: function (event) {
-       return this.$router.currentRoute.value.name === 'home';
-    }, */
+  computed: {
+    currentRouteName() {
+      return this.$route.name;
+    },
   },
   setup() {
     return { sidebarWidth };
@@ -23,10 +23,10 @@ export default {
 </script>
 
 <template>
-  <BaseHeader />
-  <SideBar />
+  <BaseHeader v-if="currentRouteName !== 'home'" />
+  <SideBar v-if="currentRouteName !== 'home'" />
   <BasePage />
-  <BaseFooter />
+  <BaseFooter v-if="currentRouteName !== 'home'" />
 </template>
 
 <style lang="scss">

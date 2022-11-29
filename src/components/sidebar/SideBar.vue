@@ -1,9 +1,11 @@
 <script>
 import SideBarLink from "./SideBarLink.vue";
 import { collapsed, toggleSidebar, sidebarWidth } from "./state";
+import Icon from "../Icon.vue";
 export default {
-  props: {},
-  components: { SideBarLink },
+  props: {
+  },
+  components: { SideBarLink, Icon },
   setup() {
     return { collapsed, toggleSidebar, sidebarWidth };
   },
@@ -17,8 +19,8 @@ export default {
     <SideBarLink to="/contact" @click="toggleSidebar">Contact</SideBarLink>
   </div>
     <span class="menu-icon" @click="toggleSidebar">
-      <img v-if="collapsed" src="@/assets/images/menu-collapsed.png" alt="" />
-      <img v-else src="@/assets/images/close.png" alt="" />
+      <Icon v-if="collapsed" name="icon-menu-collapsed" />
+      <Icon v-else name="icon-menu-open"/>
     </span>
   </div>
 </template>
@@ -46,7 +48,7 @@ export default {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 2rem 2rem 2rem 0;
+  padding: 2.3rem 2rem 2.3rem 0;
   transition: 0.2s linear;
 }
 
