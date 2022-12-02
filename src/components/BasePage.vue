@@ -16,6 +16,7 @@
   padding-bottom: 2rem;
   max-width: 100vw;
   max-height: 100%;
+  min-height: 80vh;
   overflow: none;
 }
   </style>

@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../views/LandingPage.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
-import WorkView from '../views/WorkView.vue'
+import CommercialView from '../views/CommercialView.vue'
+import FilmView from '../views/FilmView.vue'
 
 const routes = [
   {
@@ -21,9 +22,14 @@ const routes = [
     component: ContactView
   },
   {
-    path: '/work',
-    name: 'work',
-    component: WorkView
+    path: '/commercial',
+    name: 'commercial',
+    component: CommercialView
+  },
+  {
+    path: '/film',
+    name: 'film',
+    component: FilmView
   }
 ]
 

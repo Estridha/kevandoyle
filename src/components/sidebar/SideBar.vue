@@ -12,9 +12,10 @@ export default {
 };
 </script>
 <template>
-  <div class="sidebar" :style="{ width: sidebarWidth, backgroundColor: !collapsed ? 'white' : none }">
+  <div class="sidebar" :style="{ width: sidebarWidth, backgroundColor: !collapsed ? 'white' : '' }">
   <div v-if="!collapsed" class="link-container">
     <SideBarLink to="/work" @click="toggleSidebar">Work</SideBarLink>
+    <SideBarLink to="/film" @click="toggleSidebar">Film</SideBarLink>
     <SideBarLink to="/about" @click="toggleSidebar">About</SideBarLink>
     <SideBarLink to="/contact" @click="toggleSidebar">Contact</SideBarLink>
   </div>
@@ -40,7 +41,7 @@ export default {
   right: 0;
   transition: 1s ease;
   
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1025px) {
     display: none;
   }
 }

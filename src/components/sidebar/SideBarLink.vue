@@ -43,7 +43,7 @@ export default {
   position: relative;
   text-transform: uppercase;
   user-select: none;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 0.25em;
   height: 1.5em;
   color: white;

@@ -191,12 +191,12 @@ export default {
     }
   }
   .portrait-image {
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1025px) {
       height: fit-content;
       width: 35%;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     flex-direction: column;
   }
 }

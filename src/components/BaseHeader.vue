@@ -2,7 +2,8 @@
   <div :class="{ change_color: scrollPosition > 50 }" class="header-container">
     <p>Kevan Doyle</p>
     <div class="navigation-menu">
-      <router-link to="/work">Work</router-link>
+      <router-link to="/commercial">Commercial</router-link>
+      <router-link to="/film">Film</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
     </div>
@@ -21,7 +22,6 @@ export default {
   methods: {
     updateScroll() {
       this.scrollPosition = window.scrollY;
-      console.log(this.scrollPosition);
     },
   },
   mounted() {
@@ -40,6 +40,7 @@ export default {
   align-items: center;
   text-transform: uppercase;
   padding: 2.5rem;
+  z-index: 1;
   a,
   li {
     color: black;
@@ -60,7 +61,7 @@ export default {
 .navigation-menu {
   display: flex;
   align-items: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1025px) {
     display: none;
   }
 }
