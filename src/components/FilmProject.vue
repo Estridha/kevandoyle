@@ -46,7 +46,9 @@
   }
 
   .project-desc {
-    width: 50%;
+    @media screen and (min-width: 1025px) {
+      width: 50%;
+  }
   }
 
   .project-video {

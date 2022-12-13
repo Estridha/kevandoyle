@@ -1,7 +1,6 @@
 <template>
   <div class="film-view-container">
-    <div>
-    <BaseH2 title="Film" />
+    <BaseH2 title="Film"/>
     <div class="reel-container">
       <iframe
         src="https://www.youtube.com/embed/OPIdmPPCnyw?controls=0&modestbranding=1&autoplay=1"
@@ -17,7 +16,7 @@
       :filmSrc="film.src"
     />
   </div>
-  </div>
+
 </template>
 
 <script>

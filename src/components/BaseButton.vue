@@ -1,5 +1,6 @@
 <template>
   <button
+   :type="type"
     :class="class"
     :label="text"
     :disabled="disabled"
@@ -13,6 +14,9 @@ export default {
   name: "BaseButton",
   props: {
     text: {
+      type: String,
+    },
+    type: {
       type: String,
     },
     class: {

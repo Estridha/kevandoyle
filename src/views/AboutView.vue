@@ -29,8 +29,8 @@
           free to check out his instagram @kevandoyle_ to see recent work. Kevan
           Doyle is here to fulfill all your content and filming needs."
         />
-        <router-link to="/work"
-          ><BaseButton class="primary" text="Explore my work"
+        <router-link to="/commercial"
+          ><BaseButton class="primary" text="Explore his work"
         /></router-link>
       </div>
     </div>
