@@ -2,8 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../views/LandingPage.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
-import CommercialView from '../views/CommercialView.vue'
+import PhotoView from '../views/PhotoView.vue'
 import FilmView from '../views/FilmView.vue'
+import CommercialView from '../views/CommercialView.vue'
 import MessageSentView from '../views/MessageSentView.vue'
 
 const routes = [
@@ -18,7 +19,12 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/commercial',
+    path: '/photo',
+    name: 'photo',
+    component: PhotoView
+  },
+  {
+    path: '/photo/commercial',
     name: 'commercial',
     component: CommercialView
   },

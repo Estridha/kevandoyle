@@ -2,7 +2,7 @@
   <div :class="{ change_color: scrollPosition > 50 }" class="header-container">
     <p>Kevan Doyle</p>
     <div class="navigation-menu">
-      <router-link to="/commercial">Commercial</router-link>
+      <router-link to="/photo">Photo</router-link>
       <router-link to="/film">Film</router-link>
       <router-link to="/about">About</router-link>
       <router-link to="/contact">Contact</router-link>
@@ -46,6 +46,10 @@ export default {
     color: black;
     margin: 0 1rem;
     text-decoration: none;
+    &:last-child {
+    margin: 0 0 0 1rem;
+}
+
   }
 
   a.router-link-exact-active {

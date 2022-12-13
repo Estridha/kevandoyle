@@ -45,6 +45,7 @@ export default {
 
 *,
 body {
+  display: border-box;
   color: black;
   margin: 0;
   padding: 0;

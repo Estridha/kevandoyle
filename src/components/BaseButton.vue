@@ -4,6 +4,7 @@
     :class="class"
     :label="text"
     :disabled="disabled"
+    @click="$emit('userClicked')"
   >
     {{ text }}
   </button>
@@ -34,8 +35,8 @@ button {
   background: none;
   color: black;
   border: none;
-  border-radius: 8px;
-  padding: 15px 32px;
+  border-radius: 6px;
+  padding: 12px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -52,6 +53,14 @@ button {
   &.secondary {
     color: black;
     background: white;
+  }
+
+  &.tertiary {
+    color: white;
+    &:hover {
+      color: black;
+      background: white;
+  }
   }
   
   &:hover {
