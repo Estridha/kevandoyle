@@ -14,7 +14,7 @@ export default {
 <template>
   <div class="sidebar" :style="{ width: sidebarWidth, backgroundColor: !collapsed ? 'white' : '' }">
   <div v-if="!collapsed" class="link-container">
-    <SideBarLink to="/work" @click="toggleSidebar">Work</SideBarLink>
+    <SideBarLink to="/photo" @click="toggleSidebar">Photo</SideBarLink>
     <SideBarLink to="/film" @click="toggleSidebar">Film</SideBarLink>
     <SideBarLink to="/about" @click="toggleSidebar">About</SideBarLink>
     <SideBarLink to="/contact" @click="toggleSidebar">Contact</SideBarLink>

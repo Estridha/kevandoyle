@@ -1,6 +1,6 @@
 <template>
   <div class="photo-view">
-  <ImageLink fileName="commercial.jpg" buttonText="Commercial"/>
+  <ImageLink fileName="commercial.jpg" buttonText="Commercial" @userClicked="goToPage('commercial')" />
   <ImageLink fileName="editorial.jpg" buttonText="Editorial"/>
   <ImageLink fileName="prints.jpg" buttonText="Prints"/>
 </div>
@@ -13,6 +13,15 @@ export default {
   name: 'PhotoView',
   components: {
     ImageLink,
+  },
+  methods: {
+    goToPage(page) {
+      if(page === 'commercial') {
+        this.$router.push('/photo/commercial')
+      } else if (page === 'prints') {
+        this.$router.push('/photo/prints')
+      }
+    },
   }
 }
 </script>

@@ -2,7 +2,7 @@
   <div class="about-container">
     <div class="page-section">
       <div class="content-container">
-        <BaseH2 title="about"/>
+        <BaseH2 title="THIS SITE IS UNDER CONSTRUCTION. IMAGES ARE TAKEN FROM UNSPLASH TO FILL OUT SPACE AND NOT BY THE PHOTOGRAPHER."/>
         <img class="about-me-image" src="@/assets/images/about-me-image.jpg" alt="" />
         <BaseParagraph
           text="Originally from Los Angeles, Kevan Doyle has worked on documentaries,
@@ -29,7 +29,7 @@
           free to check out his instagram @kevandoyle_ to see recent work. Kevan
           Doyle is here to fulfill all your content and filming needs."
         />
-        <router-link to="/commercial"
+        <router-link to="/photo"
           ><BaseButton class="primary" text="Explore his work"
         /></router-link>
       </div>

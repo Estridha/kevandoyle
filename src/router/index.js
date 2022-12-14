@@ -5,6 +5,7 @@ import ContactView from '../views/ContactView.vue'
 import PhotoView from '../views/PhotoView.vue'
 import FilmView from '../views/FilmView.vue'
 import CommercialView from '../views/CommercialView.vue'
+import NomadixView from '../views/NomadixView.vue'
 import MessageSentView from '../views/MessageSentView.vue'
 
 const routes = [
@@ -26,7 +27,12 @@ const routes = [
   {
     path: '/photo/commercial',
     name: 'commercial',
-    component: CommercialView
+    component: CommercialView,
+  },
+  {
+    path: '/photo/commercial/nomadix',
+    name: 'nomadix',
+    component: NomadixView,
   },
   {
     path: '/film',

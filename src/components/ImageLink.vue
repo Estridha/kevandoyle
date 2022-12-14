@@ -2,7 +2,7 @@
     <div class="container">
     <img class="image-link" :src="require(`@/assets/images/${fileName}`)">
     <div class="button-container">
-        <BaseButton class="tertiary" :text="buttonText" @userClicked="goToPhotoPage()"
+        <BaseButton class="tertiary" :text="buttonText" @userClicked="$emit('userClicked')"
         />
     </div>
     </div>
@@ -23,11 +23,6 @@ import BaseButton from './BaseButton.vue';
     components: { 
         BaseButton,
     },
-    methods: {
-    goToPhotoPage() {
-        this.$router.push('/photo/commercial')
-    },
-  },
   };
   </script>
   
@@ -42,6 +37,7 @@ import BaseButton from './BaseButton.vue';
 
   .image-link {
     max-height: 25rem;
+    max-width: 20rem;
   }
 
   .button-container {
